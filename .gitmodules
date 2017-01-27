@@ -1,0 +1,9 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/StrobeOS/core
+[submodule "cosmos"]
+	path = cosmos
+	url = https://github.com/StrobeOS/cosmos
+[submodule "strobe"]
+	path = strobe
+	url = https://github.com/StrobeOS/strobe
