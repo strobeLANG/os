@@ -12,3 +12,29 @@ The project is seperated into a few submodules.
 | [lib](//github.com/StrobeOS/lib) | The libraries used by the Strobe programming language. | Working OK | `.str` |
 | *system* | The beggining of the operating system. | Planned | `.dif` |
 | *graphic* | The graphical core of the operating system. | Planned | `.dif` |
+
+## Building it on Windows
+* Install [Git](https://git-scm.com/download/win) for Windows;
+* Install Visual Studio 2015, Inno Setup (with Inno Preprocessor), .NET 3.5 Framework and VMWare (optional);
+* Run the following commands in `cmd`:
+```batch
+git clone https://github.com/StrobeOS/os.git os
+cd os
+call install-current.bat
+```
+
+* After that if there is a new update you can just run:
+```batch
+call update-windows.bat
+```
+
+* Now you need to open `core\strobe.kernel.sln` in Visual Studio and build the `strobe.boot` project;
+* In `core\bin\strobe.kernel\bin\Debug` you will have a `.iso` file that you can boot into;
+
+## Building it on Linux
+It cannot currently be built on Linux, but you can build the Strobe Debugger (including Compiler and Runtime) by running this command in terminal:
+```sh
+git clone https://github.com/StrobeOS/os.git os
+cd os
+sh update-linux.sh
+```
